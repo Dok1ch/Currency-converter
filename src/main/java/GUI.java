@@ -93,6 +93,9 @@ public class GUI extends JFrame {
         valueTextFrom.addKeyListener(new KeyAdapter() {
             public void keyTyped(KeyEvent e) {
 
+                if (valueTextFrom.getText().length() >= 50) // limit to 50 characters
+                    e.consume();
+
                 char symbol = e.getKeyChar();
                 if ((symbol < '0') || (symbol > '9')) {
                     e.consume();  // игнорируем введенные буквы и пробел
