@@ -80,7 +80,7 @@ public class GUI extends JFrame {
             Image image = ImageIO.read(new File("src/main/resources/images/logo.png"));
             setIconImage(image);
         } catch (IOException exception) {
-            System.out.println("Error!");
+            System.out.println("");
         }
 
         setResizable(false);
